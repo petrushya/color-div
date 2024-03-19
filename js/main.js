@@ -51,10 +51,19 @@ numberInput.addEventListener('click', () => {
 
     setGrid(divisor);
 
-  }else if(+inputNumber < 16 || +inputNumber > 100){
-    par.textContent = 'The number is not in the required range! Enter again correctly';
-  }else{
+  }else if(isNaN(divisor + +inputNumber)){
     par.textContent = 'The number must be entered in digits! Enter again correctly';
+  }else if(inputNumber === null){
+    par.textContent = '';
+  }else{
+    par.textContent = 'The number is not in the required range! Enter again correctly';
   };
   dataInput.appendChild(par);
 });
+
+squareContent.addEventListener('mouseover', (event) => {
+  let target = event.target;
+    target.style.backgroundColor='red';
+});
+
+
