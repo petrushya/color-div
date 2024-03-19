@@ -1,22 +1,35 @@
 *{
   margin: 0;
-  box-sizing: border-box;
-}
-body{
-  overflow-x: hidden;
 }
 .dataInput{
-  height: 3rlh;
+  block-size: 4rlh;
+  text-align: center;
 }
-.allContent{
+#numberInput{
+  margin: 1rem 0 0.5rem 0;
+  min-inline-size: 15ch;
+  font-weight: bolder;
+  padding: 0.125rem 0;
+}
+.squareContent{
   box-sizing: content-box;
-	block-size: calc(100vb - 3rlh);
-  margin: 0 auto;
+	block-size: calc(100vb - 5rlh);
+  margin: 0 auto 1rlh;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
   gap: 0;
-  outline: thin solid black;
+}
+.lineaggr{
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;	
+  gap: 0;
 }
 .aggregator{
-  outline: thin solid blue;
+  box-sizing: border-box;
+  background-color: green;
 }
