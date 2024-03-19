@@ -14,6 +14,8 @@ if(squareContent.offsetHeight < squareContent.offsetWidth){
 squareContent.style.inlineSize = `${squareSize}px`;
 squareContent.style.blockSize = `${squareSize}px`;
 
+function colorPart(max){return Math.floor(Math.random() * (max + 1))}; 
+
 let divisor;
 
 function setGrid(youNumber) {
@@ -24,7 +26,7 @@ function setGrid(youNumber) {
     for (let index = 0; index < divisor; index++) {
       const lineFiller = document.createElement('div');
       lineFiller.setAttribute('class', 'aggregator');
-      lineFiller.setAttribute('style', `inline-size:${squareSize/youNumber}px;block-size:${squareSize/youNumber}px;`);
+      lineFiller.setAttribute('style', `inline-size:${squareSize/youNumber}px;block-size:${squareSize/youNumber}px;opacity:1;`);
       line.appendChild(lineFiller);
     };
     squareContent.appendChild(line);
@@ -63,7 +65,10 @@ numberInput.addEventListener('click', () => {
 
 squareContent.addEventListener('mouseover', (event) => {
   let target = event.target;
-    target.style.backgroundColor='red';
+  target.style.backgroundColor = `rgb(${colorPart(255)} ${colorPart(255)} ${colorPart(255)})`;
+  if(target.style.opacity && target.style.opacity > 0){
+    target.style.opacity -= 0.1;
+  };
 });
 
 

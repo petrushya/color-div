@@ -1,6 +1,14 @@
 *{
   margin: 0;
 }
+.content{
+  inline-size: 100vi;
+  min-block-size: 100vb;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;  
+  align-items: center;
+}
 .dataInput{
   block-size: 4rlh;
   text-align: center;
@@ -14,12 +22,13 @@
 .squareContent{
   box-sizing: content-box;
 	block-size: calc(100vb - 5rlh);
-  margin: 0 auto 1rlh;
+	inline-size: 100vi;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   gap: 0;
+  background-color: #000000;
 }
 .lineaggr{
   box-sizing: border-box;
@@ -31,5 +40,5 @@
 }
 .aggregator{
   box-sizing: border-box;
-  background-color: green;
+  background-color: #dcdcdc;
 }
